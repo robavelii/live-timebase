@@ -1,0 +1,34 @@
+{
+  "name": "live-timebase",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Two collector windows on one live HLS URL, tagging events against a PDT timebase.",
+  "scripts": {
+    "dev": "next dev -p 3200",
+    "build": "next build",
+    "start": "next start -p 3200",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test \"test/*.test.ts\"",
+    "smoke": "node scripts/smoke.mjs",
+    "check:two-window": "node scripts/two-window-check.mjs",
+    "check:bench": "node scripts/bench-check.mjs",
+    "stream": "bash scripts/make-live-stream.sh",
+    "check:pdt": "node scripts/check-pdt.mjs",
+    "check:join": "node scripts/join-flow-check.mjs"
+  },
+  "dependencies": {
+    "hls.js": "^1.5.20",
+    "next": "^15.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=22.6"
+  }
+}
